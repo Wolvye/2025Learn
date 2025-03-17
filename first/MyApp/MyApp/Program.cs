@@ -1,5 +1,5 @@
 ﻿namespace MyApp
-{
+{ //Wiederholung der Basics
     internal class Program
     {
         static void Main(string[] args)

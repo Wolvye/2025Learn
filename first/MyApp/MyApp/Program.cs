@@ -66,7 +66,17 @@
                 i++;
         }
              */
-
+            //Guess Game
+            Random random = new Random();
+            int secretNumber = random.Next(1,11);
+            int UserGuess = 0;
+            while (UserGuess != secretNumber)
+            {
+                Console.WriteLine("Rate welche Zahl ich bin, zwischen 1 und 10");
+                UserGuess = int.Parse(Console.ReadLine());
+                
+            }
+            Console.WriteLine("Das war die richtige Zahl!");
 
         }
     }

@@ -66,7 +66,40 @@
                 i++;
         }
              */
+            //Guess Game
+            /*
+            Random random = new Random();
+            int secretNumber = random.Next(1,11);
+            int UserGuess = 0;
+            while (UserGuess != secretNumber)
+            {
+                Console.WriteLine("Rate welche Zahl ich bin, zwischen 1 und 10");
+                UserGuess = int.Parse(Console.ReadLine());
+                
+            }
+            Console.WriteLine("Das war die richtige Zahl!");
+            */
 
+            //Aufgabe: Erstelle ein Programm, dass den Nutzer 5x nach einer Zahleneingabe fragt
+            //speichere die Werte in einem Arrayy mit 5 Pätzen
+            //Berechne zum Schluss die Summe aller Zahlen, die vom Nutzer eingegeben werden
+
+            float[] NutzerEingabeArray = new float[5];
+            float zwischenspeicher = 0;
+            for (int i = 0; i <= 4; i++)
+            {
+                
+                Console.WriteLine("Bitte gib eine Zahl ein.");
+                zwischenspeicher=float.Parse( Console.ReadLine());
+                NutzerEingabeArray[i] = zwischenspeicher;
+          
+            }
+            float result = 0;
+            foreach (float item in NutzerEingabeArray)
+            {
+               result += item;
+            }
+            Console.WriteLine(result);
 
         }
     }

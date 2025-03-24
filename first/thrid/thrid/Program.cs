@@ -8,6 +8,7 @@ namespace thrid
         {
 
             //Anwendung: Todo List
+            // was brauche ich ?
             // Add,View,Delete,Quit
 
             string[] todoList = new string[10];
@@ -51,7 +52,8 @@ namespace thrid
                         Console.WriteLine("Invalid task number.");
                     }
                     else 
-                    {
+                    {//hier wird nicht direkt gelöscht, sondern die Liste wird verschoben
+                     //auf das alte Element
                         for (int i = taskNumber; i < currentTaskCount - 1; i++)
                         {
                             todoList[i] = todoList[i + 1];

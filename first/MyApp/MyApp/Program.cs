@@ -89,7 +89,7 @@
             for (int i = 0; i <= 4; i++)
             {
                 
-                Console.WriteLine("Bitte gib eine Zahl ein.");
+                Console.WriteLine("Bitte gib die " + (i+1) + " Zahl ein.");
                 zwischenspeicher=float.Parse( Console.ReadLine());
                 NutzerEingabeArray[i] = zwischenspeicher;
           
@@ -99,7 +99,7 @@
             {
                result += item;
             }
-            Console.WriteLine(result);
+            Console.WriteLine("Die Summe ist: " + result);
 
         }
     }

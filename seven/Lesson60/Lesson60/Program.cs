@@ -38,14 +38,15 @@ namespace MyApp
             names.Add(Nami);
 
             //forschleife hier
-            float count = names.Count;
-            Console.WriteLine(count);
+            float count = 0;
+            
             foreach (Student student in names)
             {
-                float average = student.nC + student.nC/count;
-                Console.WriteLine(average);
-                break;
+                count += student.nC;
             }
+            float averagePoints = count / names.Count;
+            Console.WriteLine("Der durchschnittliche NC ist : "+ averagePoints);
+            
 
         }
     }

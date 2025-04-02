@@ -37,7 +37,7 @@ namespace MyApp
             names.Add(Libby);
             names.Add(Nami);
 
-            //forschleife hier
+
             float count = 0;
             
             foreach (Student student in names)

@@ -1,0 +1,1 @@
+﻿Console.WriteLine($"Running on: {Environment.Version}");

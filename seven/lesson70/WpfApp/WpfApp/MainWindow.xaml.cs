@@ -18,14 +18,23 @@ namespace WpfApp
     public partial class MainWindow : Window
     {
 
-        private readonly string apiKey = "24e924c1a7ef8d371a821296657cb4ff";
+        private readonly string apiKey = ""; //Hier ApiKey von https://www.weatherapi.com/ einfügen
 
-        private string requestURL = "https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}";
+        private string requestURL = "http://api.weatherapi.com/v1/";
         public MainWindow()
         {
+        // /current.json?key=YOUR_API_KEY&q=LOCATION
+
+
             InitializeComponent();
             HttpClient httpClient = new HttpClient();
-            HttpResponseMessage httpResponse = httpClient.GetAsync();
+            string city = "Hamburg";
+
+            var finalUri = $"{requestURL}current.json?key={apiKey}&q={city}";
+            HttpResponseMessage httpResponse = httpClient.GetAsync(finalUri).Result;
+
+            string response = httpResponse.Content.ReadAsStringAsync().Result;
+            Console.WriteLine(response);
         }
     }
 }

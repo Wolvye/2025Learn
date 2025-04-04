@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
 
 namespace WpfApp
 {
@@ -27,14 +28,22 @@ namespace WpfApp
 
 
             InitializeComponent();
-            HttpClient httpClient = new HttpClient();
-            string city = "Hamburg";
+            WeatherMapResponse result = GetWeatherData("Berlin");
 
+
+            backgroundIMG.ImageSource = new BitmapImage(new Uri("Images/Rain.png",UriKind.Relative));
+
+
+        }
+
+        public WeatherMapResponse GetWeatherData(string city)
+        {
+            HttpClient httpClient = new HttpClient();
             var finalUri = $"{requestURL}current.json?key={apiKey}&q={city}";
             HttpResponseMessage httpResponse = httpClient.GetAsync(finalUri).Result;
-
             string response = httpResponse.Content.ReadAsStringAsync().Result;
-            Console.WriteLine(response);
+            WeatherMapResponse weatherMapResponse = JsonConvert.DeserializeObject<WeatherMapResponse>(response);
+            return weatherMapResponse;
         }
     }
 }

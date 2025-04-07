@@ -24,11 +24,15 @@ namespace WpfApp
         private string requestURL = "http://api.weatherapi.com/v1/";
         public MainWindow()
         {
-           
-
-
+ 
             InitializeComponent();
-            WeatherMapResponse result = GetWeatherData("Hamburg"); //Nur Städte, keine Länder!
+            UpdateUi("Dortmund");
+
+        }
+
+        public void UpdateUi(string city)
+        {
+            WeatherMapResponse result = GetWeatherData(city); //Nur Städte, keine Länder!
 
             string finalIMG = "Sun.png";
             string currentWeather = result.current.condition.text.ToLower(); //der Pfad 
@@ -54,8 +58,7 @@ namespace WpfApp
             backgroundIMG.ImageSource = new BitmapImage(new Uri($"Images/{finalIMG}", UriKind.Relative));
             labelTemperature.Content = result.current.temp_c.ToString("F1") + "°C";
             labelInfo.Content = result.current.condition.text;
-           // labelCity.Content = result.location.region;
-
+            labelCity.Content = result.location.name;
         }
 
         public WeatherMapResponse GetWeatherData(string city)
@@ -68,6 +71,12 @@ namespace WpfApp
             WeatherMapResponse weatherMapResponse = JsonConvert.DeserializeObject<WeatherMapResponse>(response);
             return weatherMapResponse;
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string query = TextBoxQuery.Text;
+            UpdateUi(query);
         }
     }
 }

@@ -9,5 +9,6 @@ namespace WpfApp
     public class Location
     {
         public string region;
+        public string name;
     }
 }

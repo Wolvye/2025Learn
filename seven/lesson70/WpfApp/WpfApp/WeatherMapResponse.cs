@@ -9,5 +9,7 @@ namespace WpfApp
    public class WeatherMapResponse
     {
         public Current current;
+        public Location location;
+      
     }
 }

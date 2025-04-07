@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace WpfApp
 {
-    public class Current
+    public class Condition
     {
-        public float temp_c;
-        public float cloud;
-        public Condition condition;
+        public string text;
     }
 }

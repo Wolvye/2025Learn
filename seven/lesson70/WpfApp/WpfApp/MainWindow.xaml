@@ -9,14 +9,67 @@
         ResizeMode="NoResize" 
         >
     <Grid>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="20">
+            </ColumnDefinition>
+            
+            <ColumnDefinition >
+            </ColumnDefinition>
+            
+            <ColumnDefinition>
+            </ColumnDefinition>
+            
+            <ColumnDefinition Width="20">
+            </ColumnDefinition>
+            
+            <ColumnDefinition>
+            </ColumnDefinition>
+            
+            <ColumnDefinition Width="20">
+            </ColumnDefinition>
         </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20">
+
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+            <RowDefinition>
+                
+            </RowDefinition>
+            <RowDefinition Height="20">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+
         <Grid.Background>
             <ImageBrush x:Name="backgroundIMG" ImageSource="/Images/Sun.png">
-             
+
             </ImageBrush>
         </Grid.Background>
+
+        <Label x:Name="labelCity" Grid.Column="1"  Grid.Row="1" Content="City" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="70" FontFamily="Georgia"  Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="5" BlurRadius="2" Opacity="0.95"/>
+            </Label.Effect>
+        </Label>
+
+        <Label x:Name="labelTemperature" Grid.Column="1"  Grid.Row="2" Content="Temp" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="80" FontFamily="Georgia" FontWeight="Bold" Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="5" BlurRadius="2" Opacity="0.95"/>
+            </Label.Effect>
+        </Label>
+
+        <Label x:Name="labelInfo" Grid.Column="1"  Grid.Row="3" Content="Info" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="50" FontFamily="Georgia"  Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="5" BlurRadius="2" Opacity="0.95"/>
+            </Label.Effect>
+        </Label>
     </Grid>
 </Window>

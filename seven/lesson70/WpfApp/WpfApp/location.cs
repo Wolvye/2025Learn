@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WpfApp
 {
-    internal class location
+    public class Location
     {
+        public string region;
     }
 }

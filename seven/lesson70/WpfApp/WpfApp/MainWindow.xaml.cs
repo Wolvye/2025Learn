@@ -24,15 +24,37 @@ namespace WpfApp
         private string requestURL = "http://api.weatherapi.com/v1/";
         public MainWindow()
         {
-        // /current.json?key=YOUR_API_KEY&q=LOCATION
+           
 
 
             InitializeComponent();
-            WeatherMapResponse result = GetWeatherData("Berlin");
+            WeatherMapResponse result = GetWeatherData("Hamburg"); //Nur Städte, keine Länder!
 
+            string finalIMG = "Sun.png";
+            string currentWeather = result.current.condition.text.ToLower(); //der Pfad 
 
-            backgroundIMG.ImageSource = new BitmapImage(new Uri("Images/Rain.png",UriKind.Relative));
+            if (currentWeather.Contains("overcast"))
+            {
+                finalIMG = "Cloud.png";
+            }
+            else if (currentWeather.Contains("sun"))
+            {
+                finalIMG = "Sun.png";
+            }
+            else if (currentWeather.Contains("rain"))
+            {
+                finalIMG = "Rain.png";
+            }
+            else if (currentWeather.Contains("snow"))
+            {
+                finalIMG = "Snow.png";
+            }
+            ;
 
+            backgroundIMG.ImageSource = new BitmapImage(new Uri($"Images/{finalIMG}", UriKind.Relative));
+            labelTemperature.Content = result.current.temp_c.ToString("F1") + "°C";
+            labelInfo.Content = result.current.condition.text;
+           // labelCity.Content = result.location.region;
 
         }
 
@@ -42,8 +64,10 @@ namespace WpfApp
             var finalUri = $"{requestURL}current.json?key={apiKey}&q={city}";
             HttpResponseMessage httpResponse = httpClient.GetAsync(finalUri).Result;
             string response = httpResponse.Content.ReadAsStringAsync().Result;
+            // Console.WriteLine(response); 
             WeatherMapResponse weatherMapResponse = JsonConvert.DeserializeObject<WeatherMapResponse>(response);
             return weatherMapResponse;
+
         }
     }
 }

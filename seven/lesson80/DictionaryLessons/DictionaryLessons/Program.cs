@@ -10,14 +10,23 @@
 
             int[] numbers = new int[10]
                 {
-                    10,20,40,90,50,10,20,40,90,50
+                    10,20,40,90,50,10,20,40,40,50
                 };
 
             Dictionary<int,int> numbersCount = new Dictionary<int, int>();
 
             foreach (int number in numbers)
             {
-                numbersCount.Add(number, 1);
+
+                if (numbersCount.ContainsKey(number))
+                {
+                    //Number kommt vor(Key existiert bereits)
+                    numbersCount[number]+=1;
+                }
+                else
+                {
+                    numbersCount.Add(number, 1);
+                }
             }
 
         }

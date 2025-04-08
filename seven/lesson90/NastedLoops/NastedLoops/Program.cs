@@ -6,12 +6,27 @@
         {
             //Nested Loops
             List<Product> products = new List<Product>();
-            products.Add(new Product("Pfanne", new List<int> { 3, 2, 1 }));
+            products.Add(new Product("Pfanne", new List<int> { 1, 2, 4 }));
             products.Add(new Product("Grill", new List<int> { 5, 4, 3 }));
             products.Add(new Product("Topf", new List<int> { 5, 2, 5 }));
 
 
+            for (int i = 0; i < products.Count; i++)
+            {
+                Console.WriteLine("Produkt " + products[i].Name);
+                for (int j = 0; j < products[i].Ratings.Count; j++)
+                {
+                    Console.WriteLine($"Das {products[i].Ratings[j]} hat eine Sternebewertung");
 
+                    if (products[i].Ratings[j] == 1)
+                    {
+                        Console.WriteLine("Dieses Produkt ist schlecht bewertet");
+                        break;
+                    }
+                }
+            }
+
+            // foreach ist sehr viel einfacher
             ////Durchlaufen aller Produkte
             //foreach (Product product in products) //OuterLoop
             //{

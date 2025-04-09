@@ -19,7 +19,7 @@ namespace WpfApp
     public partial class MainWindow : Window
     {
 
-        private readonly string apiKey = "bca39acb8e73409e92b124408250304"; //Hier ApiKey von https://www.weatherapi.com/ einfügen
+        private readonly string apiKey = ""; //Hier ApiKey von https://www.weatherapi.com/ einfügen
 
         private string requestURL = "http://api.weatherapi.com/v1/";
         public MainWindow()

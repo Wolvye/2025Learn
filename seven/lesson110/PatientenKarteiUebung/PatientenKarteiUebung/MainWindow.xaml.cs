@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace PatientenKarteiUebung
 {
@@ -23,6 +24,13 @@ namespace PatientenKarteiUebung
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
+            string content = textBoxContent.Text;
+            string filename =textBoxFileName.Text;
+
+            using (FileStream fs = File.Create(filename)) //Using ist disposted- es wird der arbeitsspeicher wieder frei gegeben
+            { 
+
+            }
 
         }
     }

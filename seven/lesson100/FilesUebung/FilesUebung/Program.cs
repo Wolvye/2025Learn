@@ -8,7 +8,7 @@ namespace MyApp
     {
         static void Main(string[] args)
         {   //Create File
-            string path = "test.txt";
+            //string path = "test.txt";
             //    //File.Create(path);
 
             //    // Read File
@@ -40,11 +40,43 @@ namespace MyApp
             //}
 
             //Delete
-            if (File.Exists(path))
-            { 
-                File.Delete(path);
-            }
+            //if (File.Exists(path))
+            //{ 
+            //    File.Delete(path);
+            //}
 
+            //string path = "files/";
+            //string fileName = "text.txt";
+
+            //if (Directory.Exists(path))
+            //{
+            //    Console.WriteLine("Ordner existiert");
+            //}
+            //else
+            //{
+            //    Directory.CreateDirectory(path);
+            //}
+            //// Get files
+            //var filesInDir = Directory.GetFiles(path);
+            //for(int i = 0; i < filesInDir.Length; i++) 
+            //{
+            //    Console.WriteLine(filesInDir[i]);
+            //}
+            ////Get Ordner
+            //var dirInDir = Directory.GetDirectories(path);
+            //for (int i = 0; i < filesInDir.Length; i++)
+            //{
+            //    Console.WriteLine(dirInDir[i]);
+            //}
+            ////wo befinden wir uns
+            //var currentPath = Directory.GetCurrentDirectory();
+            //Console.WriteLine(currentPath);
+
+            //Environment Ordner die man so kennt, sowas wie auf dem Desktop (aber der Wert ist eine Zahl)
+            // string path =Environment.SpecialFolder.(Environment.SpecialFolder.Desktop) + "/files";
+
+            //mit direkten Pfad (zB aus dem Explorer) Muss man ein @ vorsetzen
+            // string path = @"C:\Users\Files\files";
 
         }
     }

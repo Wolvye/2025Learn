@@ -17,9 +17,6 @@ namespace BioMarktUebung
             InitializeComponent();
         }
 
-        private void LoadingScreen_Load(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }

@@ -25,13 +25,13 @@ namespace PatientenKarteiUebung
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             string content = textBoxContent.Text;
-            string filename =textBoxFileName.Text;
+            string filename = textBoxFileName.Text;
 
             using (FileStream fs = File.Create(filename)) //Using ist disposted- es wird der arbeitsspeicher wieder frei gegeben
-            { 
+            {
+                Byte[] contentConvertedToByteArrey = Encoding.ASCII.GetBytes(content);
 
             }
-
         }
     }
 }

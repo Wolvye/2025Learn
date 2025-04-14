@@ -37,6 +37,7 @@
         <TextBox x:Name="textBoxContent" AcceptsReturn="True" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2" Text="TextBox" TextWrapping="Wrap"/>
         <Button x:Name="btnCreate" Grid.Row="3" Grid.Column="3"  Content="Erstellen" Width="150" Height="50" Click="btnCreate_Click"/>
         <TextBox x:Name="textBoxFileName" Grid.Row="1" Grid.Column="3"  TextWrapping="Wrap" Text="Dateiname" Height="50" Width="200" VerticalAlignment="Top"/>
+        <Button x:Name="btnRead" Grid.Row="2" Grid.Column="3"  Content="Lesen" Width="150" Height="50" Click="btnRead_Click"/>
 
     </Grid>
 </Window>

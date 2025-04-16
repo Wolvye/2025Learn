@@ -16,5 +16,10 @@ namespace BioMarktUebung
         {
             InitializeComponent();
         }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

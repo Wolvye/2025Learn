@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadingScreen));
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.loadingProgressbar = new System.Windows.Forms.ProgressBar();
             this.LoadingLabel = new System.Windows.Forms.Label();
-            this.loadingProzent = new System.Windows.Forms.Label();
+            this.lblLoadingProgress = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loadingbarTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // progressBar1
+            // loadingProgressbar
             // 
-            this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.progressBar1.Location = new System.Drawing.Point(153, 494);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(600, 25);
-            this.progressBar1.TabIndex = 0;
+            this.loadingProgressbar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.loadingProgressbar.Location = new System.Drawing.Point(153, 494);
+            this.loadingProgressbar.Name = "loadingProgressbar";
+            this.loadingProgressbar.Size = new System.Drawing.Size(600, 25);
+            this.loadingProgressbar.TabIndex = 0;
             // 
             // LoadingLabel
             // 
@@ -55,16 +57,16 @@
             this.LoadingLabel.TabIndex = 1;
             this.LoadingLabel.Text = "Loading";
             // 
-            // loadingProzent
+            // lblLoadingProgress
             // 
-            this.loadingProzent.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.loadingProzent.AutoSize = true;
-            this.loadingProzent.ForeColor = System.Drawing.SystemColors.Control;
-            this.loadingProzent.Location = new System.Drawing.Point(487, 458);
-            this.loadingProzent.Name = "loadingProzent";
-            this.loadingProzent.Size = new System.Drawing.Size(25, 15);
-            this.loadingProzent.TabIndex = 2;
-            this.loadingProzent.Text = "0%";
+            this.lblLoadingProgress.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblLoadingProgress.AutoSize = true;
+            this.lblLoadingProgress.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblLoadingProgress.Location = new System.Drawing.Point(487, 458);
+            this.lblLoadingProgress.Name = "lblLoadingProgress";
+            this.lblLoadingProgress.Size = new System.Drawing.Size(25, 15);
+            this.lblLoadingProgress.TabIndex = 2;
+            this.lblLoadingProgress.Text = "0%";
             // 
             // pictureBox1
             // 
@@ -75,6 +77,10 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // loadingbarTimer
+            // 
+            this.loadingbarTimer.Tick += new System.EventHandler(this.loadingbarTimer_Tick);
+            // 
             // LoadingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,14 +89,15 @@
             this.ClientSize = new System.Drawing.Size(889, 547);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.loadingProzent);
+            this.Controls.Add(this.lblLoadingProgress);
             this.Controls.Add(this.LoadingLabel);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.loadingProgressbar);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoadingScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pro Natur Biomarkt";
+            this.Load += new System.EventHandler(this.LoadingScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -99,10 +106,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar loadingProgressbar;
         private System.Windows.Forms.Label LoadingLabel;
-        private System.Windows.Forms.Label loadingProzent;
+        private System.Windows.Forms.Label lblLoadingProgress;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer loadingbarTimer;
     }
 }
 

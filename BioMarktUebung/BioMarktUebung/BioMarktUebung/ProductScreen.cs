@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace BioMarktUebung
 {
-    public partial class MainMenuScreen : Form
+    public partial class ProductScreen : Form
     {
-        public MainMenuScreen()
+        public ProductScreen()
         {
             InitializeComponent();
-        }
-
-        private void btnProducts_Click(object sender, EventArgs e)
-        {
-            ProductScreen productScreen = new ProductScreen();
-            productScreen.Show();
-            this.Hide();
         }
     }
 }

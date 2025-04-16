@@ -33,6 +33,14 @@ namespace BioMarktUebung
             if (loadingbarValue >= loadingProgressbar.Maximum)
             {
                 loadingbarTimer.Stop(); //Finish Loading
+
+                //Menü laden
+
+                MainMenuScreen mainMenuScreen = new MainMenuScreen();
+                mainMenuScreen.Show();
+
+                this.Hide();
+
             }
 
         }

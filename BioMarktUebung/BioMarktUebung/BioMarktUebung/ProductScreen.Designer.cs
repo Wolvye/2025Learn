@@ -41,8 +41,8 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.productsDGV = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.productsDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProName
@@ -184,14 +184,14 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // dataGridView1
+            // productsDGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(58, 156);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(704, 277);
-            this.dataGridView1.TabIndex = 11;
+            this.productsDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.productsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productsDGV.Location = new System.Drawing.Point(58, 156);
+            this.productsDGV.Name = "productsDGV";
+            this.productsDGV.Size = new System.Drawing.Size(704, 277);
+            this.productsDGV.TabIndex = 11;
             // 
             // ProductScreen
             // 
@@ -200,7 +200,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(799, 461);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.productsDGV);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnEdit);
@@ -218,7 +218,7 @@
             this.Name = "ProductScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produkte";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,6 +238,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView productsDGV;
     }
 }

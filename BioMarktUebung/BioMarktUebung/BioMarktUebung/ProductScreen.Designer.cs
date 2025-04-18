@@ -165,7 +165,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnClear.Location = new System.Drawing.Point(606, 77);
+            this.btnClear.Location = new System.Drawing.Point(414, 67);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 9;
@@ -186,12 +186,26 @@
             // 
             // productsDGV
             // 
+            this.productsDGV.AllowUserToAddRows = false;
+            this.productsDGV.AllowUserToDeleteRows = false;
+            this.productsDGV.AllowUserToResizeColumns = false;
+            this.productsDGV.AllowUserToResizeRows = false;
+            this.productsDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.productsDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.productsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.productsDGV.Location = new System.Drawing.Point(58, 156);
+            this.productsDGV.MultiSelect = false;
             this.productsDGV.Name = "productsDGV";
+            this.productsDGV.ReadOnly = true;
+            this.productsDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.productsDGV.RowHeadersVisible = false;
+            this.productsDGV.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.productsDGV.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.productsDGV.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.productsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.productsDGV.Size = new System.Drawing.Size(704, 277);
             this.productsDGV.TabIndex = 11;
+            this.productsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsDGV_CellContentClick);
             // 
             // ProductScreen
             // 

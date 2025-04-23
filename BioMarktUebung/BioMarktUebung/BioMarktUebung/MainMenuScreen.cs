@@ -23,5 +23,12 @@ namespace BioMarktUebung
             productScreen.Show();
             this.Hide();
         }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+           billScreen billScreen = new billScreen();
+            billScreen.Show(); 
+            this.Hide();
+        }
     }
 }

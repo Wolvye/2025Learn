@@ -37,7 +37,7 @@
             this.txtBoxID = new System.Windows.Forms.TextBox();
             this.txtBoxName = new System.Windows.Forms.TextBox();
             this.txtBoxAdress = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtBoxTotalPrice = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -52,6 +52,7 @@
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Sichern";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // textBox1
             // 
@@ -123,12 +124,12 @@
             this.txtBoxAdress.Size = new System.Drawing.Size(155, 20);
             this.txtBoxAdress.TabIndex = 8;
             // 
-            // textBox4
+            // txtBoxTotalPrice
             // 
-            this.textBox4.Location = new System.Drawing.Point(596, 343);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtBoxTotalPrice.Location = new System.Drawing.Point(596, 343);
+            this.txtBoxTotalPrice.Name = "txtBoxTotalPrice";
+            this.txtBoxTotalPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxTotalPrice.TabIndex = 9;
             // 
             // btnEdit
             // 
@@ -139,6 +140,7 @@
             this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Bearbeiten";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -149,6 +151,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Löschen";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -159,6 +162,7 @@
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Leeren";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // billScreen
             // 
@@ -169,7 +173,7 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtBoxTotalPrice);
             this.Controls.Add(this.txtBoxAdress);
             this.Controls.Add(this.txtBoxName);
             this.Controls.Add(this.txtBoxID);
@@ -198,7 +202,7 @@
         private System.Windows.Forms.TextBox txtBoxID;
         private System.Windows.Forms.TextBox txtBoxName;
         private System.Windows.Forms.TextBox txtBoxAdress;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBoxTotalPrice;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;

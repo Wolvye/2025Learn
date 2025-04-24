@@ -31,5 +31,49 @@ namespace BioMarktUebung
         {
 
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            if (txtBoxName.Text == ""
+                || txtBoxID.Text == ""
+                || txtBoxAdress.Text == ""
+                || txtBoxAdress.Text == "")
+            {
+                MessageBox.Show("Bitte fülle alle Werte/Felder aus.");
+                return;
+            }
+
+            string customerId    = txtBoxID.Text;
+            string customerName = txtBoxAdress.Text;
+            string customerAdress = txtBoxAdress.Text;
+            string customerPrice = txtBoxTotalPrice.Text;
+
+            string query = string.Format("insert into Products values('{0}','{1}','{2}','{3}')", customerId, customerName, customerAdress, customerPrice);
+
+            //ExecuteQuery(query);
+            //ClearAllFields();
+            //ShowProducts();
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtBoxName.Text = "";
+            txtBoxID.Text = "";
+            txtBoxAdress.Text = "";
+            txtBoxTotalPrice.Text = "";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

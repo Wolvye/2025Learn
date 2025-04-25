@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSave = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lbladress = new System.Windows.Forms.Label();
@@ -41,6 +41,20 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.CustomerDGV = new System.Windows.Forms.DataGridView();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Pro_Natur_Biomarkt_ÜbungDataSet1 = new BioMarktUebung._Pro_Natur_Biomarkt_ÜbungDataSet1();
+            this._Pro_Natur_Biomarkt_ÜbungDataSet = new BioMarktUebung._Pro_Natur_Biomarkt_ÜbungDataSet();
+            this.proNaturBiomarktÜbungDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customersTableAdapter = new BioMarktUebung._Pro_Natur_Biomarkt_ÜbungDataSet1TableAdapters.CustomersTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Pro_Natur_Biomarkt_ÜbungDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Pro_Natur_Biomarkt_ÜbungDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proNaturBiomarktÜbungDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -53,14 +67,6 @@
             this.btnSave.Text = "Sichern";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(61, 202);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(426, 206);
-            this.textBox1.TabIndex = 1;
             // 
             // lblID
             // 
@@ -81,7 +87,6 @@
             this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Name";
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // lbladress
             // 
@@ -164,12 +169,69 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // CustomerDGV
+            // 
+            this.CustomerDGV.AutoGenerateColumns = false;
+            this.CustomerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustomerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.Adresse});
+            this.CustomerDGV.DataSource = this.customersBindingSource;
+            this.CustomerDGV.Location = new System.Drawing.Point(49, 189);
+            this.CustomerDGV.Name = "CustomerDGV";
+            this.CustomerDGV.Size = new System.Drawing.Size(480, 235);
+            this.CustomerDGV.TabIndex = 13;
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataMember = "Customers";
+            this.customersBindingSource.DataSource = this._Pro_Natur_Biomarkt_ÜbungDataSet1;
+            // 
+            // _Pro_Natur_Biomarkt_ÜbungDataSet1
+            // 
+            this._Pro_Natur_Biomarkt_ÜbungDataSet1.DataSetName = "_Pro_Natur_Biomarkt_ÜbungDataSet1";
+            this._Pro_Natur_Biomarkt_ÜbungDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // _Pro_Natur_Biomarkt_ÜbungDataSet
+            // 
+            this._Pro_Natur_Biomarkt_ÜbungDataSet.DataSetName = "_Pro_Natur_Biomarkt_ÜbungDataSet";
+            this._Pro_Natur_Biomarkt_ÜbungDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // proNaturBiomarktÜbungDataSetBindingSource
+            // 
+            this.proNaturBiomarktÜbungDataSetBindingSource.DataSource = this._Pro_Natur_Biomarkt_ÜbungDataSet;
+            this.proNaturBiomarktÜbungDataSetBindingSource.Position = 0;
+            // 
+            // customersTableAdapter
+            // 
+            this.customersTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // Adresse
+            // 
+            this.Adresse.DataPropertyName = "Adresse";
+            this.Adresse.HeaderText = "Adresse";
+            this.Adresse.Name = "Adresse";
+            // 
             // billScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CustomerDGV);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -181,11 +243,15 @@
             this.Controls.Add(this.lbladress);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnSave);
             this.Name = "billScreen";
             this.Text = "Rechnung";
             this.Load += new System.EventHandler(this.Rechnung_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Pro_Natur_Biomarkt_ÜbungDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Pro_Natur_Biomarkt_ÜbungDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proNaturBiomarktÜbungDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,7 +260,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lbladress;
@@ -206,5 +271,14 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.DataGridView CustomerDGV;
+        private System.Windows.Forms.BindingSource proNaturBiomarktÜbungDataSetBindingSource;
+        private _Pro_Natur_Biomarkt_ÜbungDataSet _Pro_Natur_Biomarkt_ÜbungDataSet;
+        private _Pro_Natur_Biomarkt_ÜbungDataSet1 _Pro_Natur_Biomarkt_ÜbungDataSet1;
+        private System.Windows.Forms.BindingSource customersBindingSource;
+        private _Pro_Natur_Biomarkt_ÜbungDataSet1TableAdapters.CustomersTableAdapter customersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Adresse;
     }
 }

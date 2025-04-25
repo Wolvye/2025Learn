@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,17 +21,16 @@ namespace BioMarktUebung
         public billScreen()
         {
             InitializeComponent();
+            ShowCustomers();
         }
 
         private void Rechnung_Load(object sender, EventArgs e)
         {
+            this.customersTableAdapter.Fill(this._Pro_Natur_Biomarkt_ÜbungDataSet1.Customers);
 
         }
 
-        private void lblName_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -49,7 +49,7 @@ namespace BioMarktUebung
             string customerAdress = txtBoxAdress.Text;
             string customerPrice = txtBoxTotalPrice.Text;
 
-            string query = string.Format("insert into Products values('{0}','{1}','{2}','{3}')", customerId, customerName, customerAdress, customerPrice);
+            string query = string.Format("insert into Customers values('{0}','{1}','{2}')", customerId, customerName, customerAdress);
 
             //ExecuteQuery(query);
             //ClearAllFields();
@@ -59,21 +59,50 @@ namespace BioMarktUebung
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (lastSelectedProductKey == 0)
+            {
+                MessageBox.Show("Bitte wähle zuerst ein Produkt aus");
+            }
+
+            string customerId = txtBoxID.Text;
+            string customerName = txtBoxAdress.Text;
+            string customerAdress = txtBoxAdress.Text;
+            string customerPrice = txtBoxTotalPrice.Text;
+
+            string query = string.Format("insert into Customer values('{0}','{1}','{2}','{3}')"
+                , customerId, customerName, customerAdress, customerPrice);
 
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtBoxName.Text = "";
-            txtBoxID.Text = "";
-            txtBoxAdress.Text = "";
-            txtBoxTotalPrice.Text = "";
+            ClearAllFields();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
         }
+        private void ClearAllFields()
+        {
+            txtBoxName.Text = "";
+            txtBoxID.Text = "";
+            txtBoxAdress.Text = "";
+            txtBoxTotalPrice.Text = "";
+        }
+        private void ShowCustomers()
+        {
+            databaseConnection.Open();
 
+            string query = "select * from Customers";
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, databaseConnection);
+
+            DataSet dataSet = new DataSet();
+            sqlDataAdapter.Fill(dataSet);
+
+            CustomerDGV.DataSource = dataSet.Tables[0];
+
+            databaseConnection.Close();
+        }
     }
 }

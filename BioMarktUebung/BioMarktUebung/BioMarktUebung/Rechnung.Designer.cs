@@ -43,8 +43,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.CustomerDGV = new System.Windows.Forms.DataGridView();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Pro_Natur_Biomarkt_ÜbungDataSet1 = new BioMarktUebung._Pro_Natur_Biomarkt_ÜbungDataSet1();
-            this._Pro_Natur_Biomarkt_ÜbungDataSet = new BioMarktUebung._Pro_Natur_Biomarkt_ÜbungDataSet();
+            this._Pro_Natur_Biomarkt_ÜbungDataSet1 = new BioMarktUebung._Pro_Natur_Biomarkt_ÜbungDataSet();
             this.proNaturBiomarktÜbungDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customersTableAdapter = new BioMarktUebung._Pro_Natur_Biomarkt_ÜbungDataSet1TableAdapters.CustomersTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -193,11 +192,7 @@
             this._Pro_Natur_Biomarkt_ÜbungDataSet1.DataSetName = "_Pro_Natur_Biomarkt_ÜbungDataSet1";
             this._Pro_Natur_Biomarkt_ÜbungDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // _Pro_Natur_Biomarkt_ÜbungDataSet
-            // 
-            this._Pro_Natur_Biomarkt_ÜbungDataSet.DataSetName = "_Pro_Natur_Biomarkt_ÜbungDataSet";
-            this._Pro_Natur_Biomarkt_ÜbungDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+         
             // proNaturBiomarktÜbungDataSetBindingSource
             // 
             this.proNaturBiomarktÜbungDataSetBindingSource.DataSource = this._Pro_Natur_Biomarkt_ÜbungDataSet;
@@ -274,7 +269,7 @@
         private System.Windows.Forms.DataGridView CustomerDGV;
         private System.Windows.Forms.BindingSource proNaturBiomarktÜbungDataSetBindingSource;
         private _Pro_Natur_Biomarkt_ÜbungDataSet _Pro_Natur_Biomarkt_ÜbungDataSet;
-        private _Pro_Natur_Biomarkt_ÜbungDataSet1 _Pro_Natur_Biomarkt_ÜbungDataSet1;
+        private _Pro_Natur_Biomarkt_ÜbungDataSet _Pro_Natur_Biomarkt_ÜbungDataSet1;
         private System.Windows.Forms.BindingSource customersBindingSource;
         private _Pro_Natur_Biomarkt_ÜbungDataSet1TableAdapters.CustomersTableAdapter customersTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;

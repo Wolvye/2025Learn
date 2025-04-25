@@ -36,7 +36,7 @@ namespace BioMarktUebung
         {
 
             if (txtBoxName.Text == ""
-                || txtBoxID.Text == ""
+                //|| txtBoxID.Text == ""
                 || txtBoxAdress.Text == ""
                 || txtBoxAdress.Text == "")
             {
@@ -44,16 +44,16 @@ namespace BioMarktUebung
                 return;
             }
 
-            string customerId    = txtBoxID.Text;
-            string customerName = txtBoxAdress.Text;
+            //string customerId    = txtBoxID.Text;
+            string customerName = txtBoxName.Text;
             string customerAdress = txtBoxAdress.Text;
             string customerPrice = txtBoxTotalPrice.Text;
 
-            string query = string.Format("insert into Customers values('{0}','{1}','{2}')", customerId, customerName, customerAdress);
+            string query = string.Format("insert into Customers values('{0}','{1}')", customerName, customerAdress);
 
-            //ExecuteQuery(query);
-            //ClearAllFields();
-            //ShowProducts();
+            ExecuteQuery(query);
+            ClearAllFields();
+            ShowCustomers();
 
         }
 
@@ -64,13 +64,15 @@ namespace BioMarktUebung
                 MessageBox.Show("Bitte wähle zuerst ein Produkt aus");
             }
 
-            string customerId = txtBoxID.Text;
+           // string customerId = txtBoxID.Text;
             string customerName = txtBoxAdress.Text;
             string customerAdress = txtBoxAdress.Text;
             string customerPrice = txtBoxTotalPrice.Text;
 
-            string query = string.Format("insert into Customer values('{0}','{1}','{2}','{3}')"
-                , customerId, customerName, customerAdress, customerPrice);
+            string query = string.Format("insert into Customers values('{0}','{1}','{2}',)"
+                , customerName, customerAdress, customerPrice);
+            ExecuteQuery(query);
+            ShowCustomers();
 
         }
 
@@ -81,12 +83,21 @@ namespace BioMarktUebung
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (lastSelectedProductKey == 0)
+            {
+                MessageBox.Show("Bitte wähle zuerst ein Produkt aus");
+            }
+            string query = string.Format("delete from Customers where Id={0};", lastSelectedProductKey);
+
+            ExecuteQuery(query);
+            ClearAllFields();
+            ShowCustomers();
 
         }
         private void ClearAllFields()
         {
             txtBoxName.Text = "";
-            txtBoxID.Text = "";
+           // txtBoxID.Text = "";
             txtBoxAdress.Text = "";
             txtBoxTotalPrice.Text = "";
         }
@@ -102,6 +113,13 @@ namespace BioMarktUebung
 
             CustomerDGV.DataSource = dataSet.Tables[0];
 
+            databaseConnection.Close();
+        }
+        private void ExecuteQuery(string query)
+        {
+            databaseConnection.Open();
+            SqlCommand sqlCommand = new SqlCommand(query, databaseConnection);
+            sqlCommand.ExecuteNonQuery();
             databaseConnection.Close();
         }
     }

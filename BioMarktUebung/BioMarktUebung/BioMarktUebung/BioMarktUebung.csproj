@@ -72,10 +72,10 @@
     <Compile Include="Rechnung.Designer.cs">
       <DependentUpon>Rechnung.cs</DependentUpon>
     </Compile>
-    <Compile Include="_Pro_Natur_Biomarkt_ÜbungDataSet1.Designer.cs">
+    <Compile Include="_Pro_Natur_Biomarkt_ÜbungDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>_Pro_Natur_Biomarkt_ÜbungDataSet1.xsd</DependentUpon>
+      <DependentUpon>_Pro_Natur_Biomarkt_ÜbungDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LoadingScreen.resx">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
@@ -107,16 +107,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_Pro_Natur_Biomarkt_ÜbungDataSet1.xsc">
-      <DependentUpon>_Pro_Natur_Biomarkt_ÜbungDataSet1.xsd</DependentUpon>
+    <None Include="_Pro_Natur_Biomarkt_ÜbungDataSet.xsc">
+      <DependentUpon>_Pro_Natur_Biomarkt_ÜbungDataSet.xsd</DependentUpon>
     </None>
-    <None Include="_Pro_Natur_Biomarkt_ÜbungDataSet1.xsd">
+    <None Include="_Pro_Natur_Biomarkt_ÜbungDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Pro_Natur_Biomarkt_ÜbungDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>_Pro_Natur_Biomarkt_ÜbungDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_Pro_Natur_Biomarkt_ÜbungDataSet1.xss">
-      <DependentUpon>_Pro_Natur_Biomarkt_ÜbungDataSet1.xsd</DependentUpon>
+    <None Include="_Pro_Natur_Biomarkt_ÜbungDataSet.xss">
+      <DependentUpon>_Pro_Natur_Biomarkt_ÜbungDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -22,7 +22,7 @@ namespace BioMarktUebung {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("_Pro_Natur_Biomarkt_ÜbungDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class _Pro_Natur_Biomarkt_ÜbungDataSet1 : global::System.Data.DataSet {
+    public partial class _Pro_Natur_Biomarkt_ÜbungDataSet : global::System.Data.DataSet {
         
         private CustomersDataTable tableCustomers;
         
@@ -30,7 +30,7 @@ namespace BioMarktUebung {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public _Pro_Natur_Biomarkt_ÜbungDataSet1() {
+        public _Pro_Natur_Biomarkt_ÜbungDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace BioMarktUebung {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected _Pro_Natur_Biomarkt_ÜbungDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected _Pro_Natur_Biomarkt_ÜbungDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace BioMarktUebung {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            _Pro_Natur_Biomarkt_ÜbungDataSet1 cln = ((_Pro_Natur_Biomarkt_ÜbungDataSet1)(base.Clone()));
+            _Pro_Natur_Biomarkt_ÜbungDataSet cln = ((_Pro_Natur_Biomarkt_ÜbungDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -225,7 +225,7 @@ namespace BioMarktUebung {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            _Pro_Natur_Biomarkt_ÜbungDataSet1 ds = new _Pro_Natur_Biomarkt_ÜbungDataSet1();
+            _Pro_Natur_Biomarkt_ÜbungDataSet ds = new _Pro_Natur_Biomarkt_ÜbungDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -505,7 +505,7 @@ namespace BioMarktUebung {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Pro_Natur_Biomarkt_ÜbungDataSet1 ds = new _Pro_Natur_Biomarkt_ÜbungDataSet1();
+                _Pro_Natur_Biomarkt_ÜbungDataSet ds = new _Pro_Natur_Biomarkt_ÜbungDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -863,7 +863,7 @@ SELECT Id, Name, Adresse FROM Customers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Pro_Natur_Biomarkt_ÜbungDataSet1.CustomersDataTable dataTable) {
+        public virtual int Fill(_Pro_Natur_Biomarkt_ÜbungDataSet.CustomersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -876,9 +876,9 @@ SELECT Id, Name, Adresse FROM Customers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Pro_Natur_Biomarkt_ÜbungDataSet1.CustomersDataTable GetData() {
+        public virtual _Pro_Natur_Biomarkt_ÜbungDataSet.CustomersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Pro_Natur_Biomarkt_ÜbungDataSet1.CustomersDataTable dataTable = new _Pro_Natur_Biomarkt_ÜbungDataSet1.CustomersDataTable();
+            _Pro_Natur_Biomarkt_ÜbungDataSet.CustomersDataTable dataTable = new _Pro_Natur_Biomarkt_ÜbungDataSet.CustomersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -886,14 +886,14 @@ SELECT Id, Name, Adresse FROM Customers WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Pro_Natur_Biomarkt_ÜbungDataSet1.CustomersDataTable dataTable) {
+        public virtual int Update(_Pro_Natur_Biomarkt_ÜbungDataSet.CustomersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Pro_Natur_Biomarkt_ÜbungDataSet1 dataSet) {
+        public virtual int Update(_Pro_Natur_Biomarkt_ÜbungDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Customers");
         }
         
@@ -1134,7 +1134,7 @@ SELECT Id, Name, Adresse FROM Customers WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(_Pro_Natur_Biomarkt_ÜbungDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(_Pro_Natur_Biomarkt_ÜbungDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._customersTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Customers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1153,7 +1153,7 @@ SELECT Id, Name, Adresse FROM Customers WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(_Pro_Natur_Biomarkt_ÜbungDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(_Pro_Natur_Biomarkt_ÜbungDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._customersTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Customers.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1171,7 +1171,7 @@ SELECT Id, Name, Adresse FROM Customers WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(_Pro_Natur_Biomarkt_ÜbungDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(_Pro_Natur_Biomarkt_ÜbungDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._customersTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Customers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1213,7 +1213,7 @@ SELECT Id, Name, Adresse FROM Customers WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(_Pro_Natur_Biomarkt_ÜbungDataSet1 dataSet) {
+        public virtual int UpdateAll(_Pro_Natur_Biomarkt_ÜbungDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

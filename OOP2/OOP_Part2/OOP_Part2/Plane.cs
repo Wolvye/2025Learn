@@ -8,5 +8,6 @@ namespace OOP_Part2
 {
     internal class Plane : Vehicle
     {
+        public bool HasJetDrive {  get; set; }
     }
 }

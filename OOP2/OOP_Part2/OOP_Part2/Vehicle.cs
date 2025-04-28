@@ -11,7 +11,6 @@ namespace OOP_Part2
         public float Speed { get; set; }
         public float Accerlation { get; set; }
         public float BreakSpeed {  get; set; }
-
         public int DoorCount { get; set; }
     }
 }

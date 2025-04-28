@@ -41,10 +41,19 @@ namespace OOP_2
                 BreakSpeed = 30,
                 Speed = 400,
             };
+
+            Helicopter helicopter = new Helicopter()
+            {
+                Accerlation = 200,
+                DoorCount = 2,
+                BreakSpeed = 30,
+                Speed = 300,
+            };
+
             vehicles.Add(car);
             vehicles.Add(plane);
             vehicles.Add(motorcycle);
-
+            vehicles.Add(helicopter);
 
             foreach (Vehicle vehicle in vehicles)
             {
@@ -52,30 +61,41 @@ namespace OOP_2
                 {
                     Console.WriteLine("Fahrzeug gefunden" + userInput);
                     vehicle.LogInformation();
+
                     if (userInput == "Car")
                     {
                         Car myCar = vehicle as Car;
-                       
+
                         myCar.Move();
 
-                    } else if (userInput == "Plane")
+                    }
+                    else if (userInput == "Plane")
                     {
                         Plane myPlane = vehicle as Plane;
-                        
+
                         myPlane.Move();
 
-                    } else if (userInput == "Motorcycle")
+                    }
+                    else if (userInput == "Motorcycle")
                     {
                         Motorcycle myMotorcycle = vehicle as Motorcycle;
-                        
+
                         myMotorcycle.Move();
 
-                    }else
+                    }
+                    else if (userInput == "Helicopter")
+                    {
+                        Helicopter myHelicopter = vehicle as Helicopter;
+
+                        myHelicopter.Move();
+
+                    }
+                    else
                     {
                         Console.WriteLine("Fahrzeug steht nicht zur Verfügung");
                     }
 
-                        break;
+                    break;
                 }
             }
         }

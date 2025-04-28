@@ -1,4 +1,6 @@
 ﻿using OOP_Part2;
+using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
 
 namespace OOP_2
 {
@@ -7,22 +9,16 @@ namespace OOP_2
         static void Main(string[] args)
         {
 
-            Car car = new Car()
-            {
-                Accerlation = 100,
-                DoorCount =5,
-                BreakSpeed=50,
-                Speed=300
+            List<Vehicle> list = new List<Vehicle>();
 
-            };
-            Plane plane = new Plane()
-            {
-                Accerlation = 500,
-                DoorCount = 10,
-                BreakSpeed = 200,
-                Speed = 3000,
-                HasJetDrive = true
-            };
+
+
+            Console.WriteLine("Welches Fahrzeug möchtest du fahren?");
+
+            var userInput = Console.ReadLine();
+
+            
+
 
         }
     }

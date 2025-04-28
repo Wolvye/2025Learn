@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOP_Part2
 {
-    internal class Plane : Vehicle
+    internal class Plane : Vehicle, IVihicle
     {
         public bool HasJetDrive {  get; set; }
+
+        public void Move()
+        {
+            Console.WriteLine("Die Räder befinden sich in der Luft");
+        }
     }
 }

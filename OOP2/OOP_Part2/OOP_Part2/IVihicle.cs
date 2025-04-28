@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace OOP_Part2
 {
-    internal class Car : Vehicle, IVhicle
+    interface IVihicle
     {
-        public void Move()
-        {
-            Console.WriteLine("Vier Räder haben Bodenkontakt");
-        }
+        public void Move();
+
     }
 }
